@@ -50,3 +50,26 @@ docker run -d --name moodle \
 ![Imagenes creadas](https://i.imgur.com/JuedYAU.png)
 Guardamos las imagenes de modo que podamos subirlas a github (probablemente no deje por el limite de 100mb)
 ![Guardar imagenes como tar](https://i.imgur.com/24FFgNu.png)
+<br>
+Efectivamente, no nos deja subirlas:
+```
+root@iescamas:/home/fpalm/Practica-6-Docker# git commit -m "Subidas las imagenes de docker"
+[main 2607111] Subidas las imagenes de docker
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mariadb_fernando.tar.gz
+ create mode 100644 moodle_fernando.tar.gz
+root@iescamas:/home/fpalm/Practica-6-Docker# git push
+  Username for 'https://github.com': ********************
+  Password for 'https://*******@github.com':
+  Enumerating objects: 5, done.
+  Counting objects: 100% (5/5), done.
+  warning: suboptimal pack - out of memory
+  Compressing objects: 100% (4/4), done.
+  error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+  fatal: the remote end hung up unexpectedly
+  Writing objects: 100% (4/4), 396.85 MiB | 14.50 MiB/s, done.
+  Total 4 (delta 0), reused 0 (delta 0)
+  fatal: the remote end hung up unexpectedly
+  Everything up-to-date
+root@iescamas:/home/fpalm/Practica-6-Docker#
+```
